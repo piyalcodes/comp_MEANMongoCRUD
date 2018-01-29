@@ -5,11 +5,10 @@ const MongoClient = require("mongodb").MongoClient;
  
 const app = express();
 
-app.listen(7000, () => {
-	
-	
-	
+app.listen(7000, () => {	
 });
+
+app.use(express.static('public'));
 
 
 app.get('/home', (req, res) => {
@@ -21,24 +20,24 @@ app.get('/home', (req, res) => {
 				
 		  if (err) throw err		  
 		 
-			db.collection("customers").insertOne(myobj, function(err, res) {
+			db.collection("customers").insertOne(myobj, function(err, result) {
 				if (err) throw err;
-				tt  = res;
-				console.log("1 document inserted");
-				db.close(); 
+				tt  = result;
+				//res.send(tt);
+				 
 			});
-	
+			
 
-			db.collection('customers').find().toArray(function (err, res) {
+			db.collection('customers').find().toArray(function (err, result) {
 				if (err) throw err
-				tt  = res;
-				console.log(tt);
+				tt  = result;
+				res.send(tt);
 			});
 		  
 		});
 		
 		 
- res.send(tt);
+ //res.send(tt);
 		
 		//res.send("test");;
 		
