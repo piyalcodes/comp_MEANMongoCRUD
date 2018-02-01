@@ -31,7 +31,7 @@ app.get('/home', (req, res) => {
 			db.collection('customers').find().toArray(function (err, result) {
 				if (err) throw err
 				tt  = result;
-				res.send(tt);
+				res.send(tt);  
 			});
 		  
 		});
