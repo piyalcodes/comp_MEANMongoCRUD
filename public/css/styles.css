@@ -1,2 +1,6 @@
 .p10 {
   padding: 10px; }
+
+.list-group {
+  max-height: 400px;
+  overflow-y: scroll; }

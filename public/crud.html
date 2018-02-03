@@ -5,6 +5,8 @@
 		</title>
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/styles.css">
+<script   src="js/jquery-3.3.1.min.js"></script>
+<script  src="js/app.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -14,30 +16,28 @@
 			  
 			 <div class="card">
 			  <div class="card-header bg-success text-white p-2">
-				Enquiry Log
+			Create Enquiry Log
 			  </div>
 			  <div class="card-block p10">
 				
-					<form>
+					<form name="insert">
 
 						<div class="form-group">
 							<label>Client Name: </label>
-							<input type="text" class="form-control" id="name"  placeholder="Enter client name">						 
+							<input type="text" class="form-control" id="name"  name="name" placeholder="Enter client name">						 
 						</div>
 
 						<div class="form-group">
 							<label>Client Telephone: </label>
-							<input type="tel" class="form-control" id="telephone"  placeholder="Enter client Telephone">						 
+							<input type="tel" class="form-control" id="telephone" name="telephone"  placeholder="Enter client Telephone">						 
 						</div>
 						 
 						<div class="form-group">
 								<label for="exampleTextarea">Query</label>
-								<textarea class="form-control" id="query" rows="3"></textarea>
-						</div>
-					 
-					 
+								<textarea class="form-control" id="query" name="query" rows="3"></textarea>
+						</div>				 
 						 
-						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="button" name="insert" class="btn btn-primary">Submit</button>
 					</form>
 
 			  </div>
@@ -46,14 +46,56 @@
 
 			</div>
 			<div class="col-sm">
-			  Select
+			  
+					<div class="card">
+							<div class="card-header bg-success text-white p-2">
+							Enquiry Logs
+							</div>
+							<div class="card-block p10">
+
+									<ul class="list-group">
+											 
+									</ul>
+										
+							</div>
+					</div>
 			</div>
 			<div class="col-sm">
-			  Update
+
+					<div class="card">
+							<div class="card-header bg-success text-white p-2">
+							Update Enquiry Log
+							</div>
+							<div class="card-block p10">
+
+				<form name="update">
+					
+					<div class="form-group">
+						<label>ID: </label>
+						<input type="text" class="form-control" id="id"  name="id" placeholder="Enter ID">						 
+					</div>
+					
+											<div class="form-group">
+												<label>Client Name: </label>
+												<input type="text" class="form-control" id="name"  name="name" placeholder="Enter client name">						 
+											</div>
+					
+											<div class="form-group">
+												<label>Client Telephone: </label>
+												<input type="tel" class="form-control" id="telephone" name="telephone"  placeholder="Enter client Telephone">						 
+											</div>
+											 
+											<div class="form-group">
+													<label for="exampleTextarea">Query</label>
+													<textarea class="form-control" id="query" name="query" rows="3"></textarea>
+											</div>				 
+											 
+											<button type="button" name="update" class="btn btn-primary">Submit</button>
+										</form>
+							</div>
+					</div>
 			</div>
-			<div class="col-sm">
-				Delete
-			</div>
+			
 		  </div>
 		</div> 
 	</body>
